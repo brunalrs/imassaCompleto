@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- caracteres, para podermos usar ç, acetuação sem ficar desconfigurado  -->
+    <meta charset="UTF-8">
+    <!-- faz com que o site seja compatível ao internet explore-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- relacionada a responsividade do nosso site -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Imassa</title>
+    
+</head>
+<body>
+    <!-- -----PRIMEIRA PARTE----- -->
+    <!-- é a parte de cima do nosso projeto -->
+    <!-- nele vai ficar a barra de navegação -->
+    <header class="content">
+        <!-- .logo -->
+        <div class="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <!-- é uma caixa, como se fosse uma div, mas ela explica 
+            pro browser que nela vai ter a navegacao do site -->
+        <nav>
+            <!-- ul.list-menu -->
+            <ul class="list-menu">
+                <!-- li*7>a -->
+                <li><a href="">Home</a></li>
+                <li><a href="">Sobre nós</a></li>
+                <li><a href="">Cardápio</a></li>
+                <li><a href="">Contatos</a></li>
+                <!-- bootstrap icon -->
+                <!-- vai no final cdn, copia o link e cola no head -->
+                <li><a href=""><i class="bi bi-instagram"></i></a></i></li>
+                <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                <li><a href=""><i class="bi bi-cart2"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </header>
+
+
+    <section class="first-section">
+        <div class="conteudo-principal">
+            <h1>Deixe seu dia mais massa!!!</h1>
+            <h2>As melhores massas da região</h2>
+            <!-- criando uma caixa imaginária para colocar os botões -->
+            <div class="btn">
+                <button class="reservar">Reserve uma mesa!</button>
+                <button class="montar">Monte a sua massa!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----SEGUNDA PARTE------ -->
+    <!-- section.sobre-nos#sobrenos -->
+    <section class="sobre-nos" id="sobrenos">
+        <div class="main">
+            <div class="contentsobre">
+                <h2>Sobre nós</h2>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Laudantium molestias 
+                    alias cum maiores ad aliquid pariatur, 
+                    impedit exercitationem provident rerum 
+                    nesciunt hic doloribus officia magnam 
+                    labore sunt? Blanditiis, officiis autem.
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Laudantium molestias 
+                    alias cum maiores ad aliquid pariatur, 
+                    impedit exercitationem provident rerum 
+                    nesciunt hic doloribus officia magnam 
+                    labore sunt? Blanditiis, officiis autem.
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Laudantium molestias 
+                    alias cum maiores ad aliquid pariatur, 
+                    impedit exercitationem provident rerum 
+                    nesciunt hic doloribus officia magnam 
+                    labore sunt? Blanditiis, officiis autem.</p>
+            </div>
+            <!-- <div class="img-cozinha">
+                <img src="" alt="foto cozinha">
+            </div> -->
+        </div>
+
+    </section>
+
+    <!-- ------TERCEIRA PARTE------ -->
+    <!-- section.cardapio#cardapio -->
+    <section class="cardapio" id="cardapio">
+        <h2>Cardápio</h2>
+        <!-- para usarmos o grid para alinhar esses 
+            elementos, precisamos colocá-los dentro 
+            de uma div -->
+            <div class="itens-cardapio">
+                <!-- molho branco -->
+                <div>
+                    <img src="img/branco.png" alt="">
+                    <div class="info">
+                        <h3>Ao molho branco</h3>
+                        <!-- span pois a estilização da fatia 
+                            é diferente da estilização do preço -->
+                        <h4>P (300g)<span>R$20,00</span> </h4>
+                        <h4>M (400g) <span>R$25,00</span> </h4>
+                        <h4>G (500g) <span>R$30,00</span> </h4>
+                        <button class="pedir">Pedir agora </button>
+                    </div>
+                </div>
+                <!-- frango -->
+                <div>
+                    <img src="img/frango.png" alt="">
+                    <div class="info">
+                        <h3>Frango</h3>
+                        <!-- span pois a estilização da fatia 
+                            é diferente da estilização do preço -->
+                            <h4>P (300g)<span>R$20,00</span> </h4>
+                            <h4>M (400g) <span>R$25,00</span> </h4>
+                            <h4>G (500g) <span>R$30,00</span> </h4>
+                        <button class="pedir">Pedir agora </button>
+                    </div>
+                </div>
+                <!-- almoôndegas -->
+                <div>
+                    <img src="img/almondegas.png" alt="">
+                    <div class="info">
+                        <h3>ALmôndegas</h3>
+                        <!-- span pois a estilização da fatia 
+                            é diferente da estilização do preço -->
+                            <h4>P (300g)<span>R$20,00</span> </h4>
+                            <h4>M (400g) <span>R$25,00</span> </h4>
+                            <h4>G (500g) <span>R$30,00</span> </h4>
+                        <button class="pedir">Pedir agora </button>
+                    </div>
+                </div>
+                <!-- carbonara -->
+                <div>
+                    <img src="img/carbonara.png" alt="">
+                    <div class="info">
+                        <h3>a Carbonara</h3>
+                        <!-- span pois a estilização da fatia 
+                            é diferente da estilização do preço -->
+                            <h4>P (300g)<span>R$20,00</span> </h4>
+                            <h4>M (400g) <span>R$25,00</span> </h4>
+                            <h4>G (500g) <span>R$30,00</span> </h4>
+                        <button class="pedir">Pedir agora </button>
+                    </div>
+                </div>
+                <!-- bolonhesa -->
+                <div>
+                    <img src="img/bolonhesa.png" alt="">
+                    <div class="info">
+                        <h3> ao molho bolonhesa</h3>
+                        <!-- span pois a estilização da fatia 
+                            é diferente da estilização do preço -->
+                            <h4>P (300g)<span>R$20,00</span> </h4>
+                            <h4>M (400g) <span>R$25,00</span> </h4>
+                            <h4>G (500g) <span>R$30,00</span> </h4>
+                        <button class="pedir">Pedir agora </button>
+                    </div>
+                </div>
+                <!-- camarao -->
+                <div class="camarão">
+                    <img src="img/camarao.png" alt="">
+                    <div class="info">
+                        <h3>Camarão</h3>
+                        <!-- span pois a estilização da fatia 
+                            é diferente da estilização do preço -->
+                            <h4>P (300g)<span>R$20,00</span> </h4>
+                            <h4>M (400g) <span>R$25,00</span> </h4>
+                            <h4>G (500g) <span>R$30,00</span> </h4>
+                        <button class="pedir">Pedir agora </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ------QUARTA PARTE------ -->
+    <!-- section.contatos#contatos -->
+    <section class="contatos" id="contatos">
+        <h3>Contatos</h3>
+        <div class="contatos-secao">
+            <div>
+                <i class="bi bi-telephone"></i>
+                <span>(85)9999-3333</span>
+            </div>
+            <div>
+                <i class="bi bi-instagram"></i>
+                <span>@bruna_lrs</span>
+            </div>
+            <div>
+                <i class="bi bi-facebook"></i>
+                <span>Bruna Leão</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -----QUINTA PARTE------ -->
+    <footer>Desenvolvido por Bruna Leão</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* vamos resetar nosso projeto */
+/* é algo que fazemos em todos os projetos */
+*{
+    margin: 0;
+    /* distancia entre o conteudo do elemento e sua borda */
+    padding: 0;
+    /* box-sizing: border-box; para o navegador não contar o tamanho dos 
+    elementos com margem, altura, largura */
+    box-sizing: border-box;
+    /* tira as bolinhas da lista */
+    list-style: none;
+    /* tira as bordas dos elementos */
+    border: none;
+    /* tira os sublinhados */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    /* falando que vai ser toda a altura e largura
+    da nossa tela */
+    width: 100vw;
+    height: 100vh;
+    /* tática responsiva que usamos para ficar mais 
+    fácil de usarmos algo respondivo no nosso projeto*/
+    font-size: 62.5%;
+    /* diz que a página não vai ter a barra 
+    de rolagem horizontal */
+    overflow-x: hidden;
+}
+
+/* -----MENU----- */
+/* classe do header */
+.content{
+    width: 100vw;
+    height: 70px;
+    /* todos os itens vao vicar um do lado do outro */
+    display: flex;
+    /* colocar espacameto entre os itens */
+    justify-content: space-around;
+    /* para ficarem alinhados no centro verticalmente */
+    align-items: center;
+    background-color: #1f1e1f;
+    /* header sempre vai ficar no mesmo lugar, 
+    mesmo que a página role */
+    position: fixed;
+    /* rem - se mudarmos o font size do html, 
+    ele também muda. Ficam conectados */
+    padding-left: 30rem;
+}
+
+.logo{
+    width: 140px;
+    /* automática */
+    height: auto;
+    /* ao passar o mouse por cima, a seta 
+    vira uma mãozinha */
+    cursor: pointer;
+    /* deixar um do lado do outro */
+    display: flex;
+    /* alinhados verticalmente no centro */
+    align-items: center;
+}
+
+/* pula pra first section e depois volta */
+
+
+.logo img{
+    /* vai pegar 100% da caixa .logo */
+    width: 100%;
+    height: 100%;
+}
+
+.content .list-menu{
+    width: 600px;
+    /* um do lado do outro */
+    display: flex;
+    /* alinhar no dentro da vertical */
+    align-items: center;
+    /* da um espaço entre eles */
+    justify-content: space-between;
+}
+
+.content .list-menu li a{
+    /* padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem; */
+    /* forma mais simplificada: 
+     padding: top, right, bottom, left; */
+     padding: 3rem 1rem 2rem 1rem;
+     color: white;
+     font-size: 1.8rem;
+     /* deixa todas as letras em maiúsculo */
+     /* pode ser feito manualmente */
+     text-transform: uppercase;
+     /* fazemos isso só depois do hover */
+     /* all -> todos os elementos
+        200 milisegundos
+        na entrada, qnd colocarmos o mouse em cima */
+     transition: all 200ms ease-in;
+
+}
+
+
+.content .list-menu li a:hover{
+    /* quando eu passar o mouse por cima, isso 
+    vai acontecer */
+    background-color: #3333;
+    /* borda em baixo */
+    border-bottom: 4px solid #ffc506;
+    color: #ffc506;
+    /* para fazer a transição, vamos no 
+    elemento e adicionamos uma transition */
+
+}
+
+
+/* ----FIRST SECTION---- */
+
+.first-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* quando colocamos um display flex, ele por 
+    padrão deixa os elementos alinhado em linha */
+    /* colocamos os itens um em cima do outro */
+    flex-direction: column;
+    /* alinha na vertical pois mudamos a 
+    direção para coluna */
+    justify-content: center;
+    /* para trabalharmos na horizontal */
+    /* se justify content é na vertical, 
+    align items vai ser na horizontal */
+    align-items: center;
+    /* depois do hover */
+    /* adicionando fundo de img */
+    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(img/fundo.png);
+    /* centralizamos a imahem */
+    background-position: center center;
+    /* para a imagem cobrir toda a tela */
+    background-size: cover;
+    /* para a imagem não ser repetida 
+    no decorrer da tela */
+    background-repeat: no-repeat;
+    /* para a imagem abaixar um pouco*/
+    background-position-y: 50px;
+    /* colocando uma sombra na img 
+    pegamos o background image e colocamos*/
+    /* background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(); */
+
+}
+
+.first-section .conteudo-principal{
+    display: flex;
+    /* itens ficam um em cima do outro */
+    flex-direction: column;
+    /* centralizando */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.first-section h1{
+    color: #ffc506;
+    font-size: 6rem;
+    text-transform: uppercase;
+    /* distanciamento do subtitulo */
+    margin-bottom: 1rem;
+
+}
+
+.first-section h2{
+    color: rgb(177, 177, 177);
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.btn button{
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffc506;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    /* distanciar em cima */
+    margin-top: 5rem;
+    /* depois do hover adicionamos a transition */
+    transition: all 400ms ease-in;
+}
+
+.btn button:hover{
+    border: 1px #ffc506;
+    /* sem fundo, o fundo vai ser a img de fundo */
+    background-color: transparent;
+    color: #ffc506;
+    /* fazemos agora a transition no btn button */
+}
+
+/* caixa onde estão os botões */
+.btn{
+    width: 480px;
+    display: flex;
+    /* para dar o espaçamento entre um btn e outro */
+    justify-content: space-between;
+}
+
+
+/* -----SEGUNDA PARTE------ */
+/* vamos agora pro html */
+
+/* -----SOBRE NÓS----- */
+
+.sobre-nos{
+    background-color: #1f1e1f;
+    width: 100%;
+    /* dentro da section os elementos vão
+    ter um espaçamento de 5rem */
+    padding-bottom: 5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-nos img{
+    width: 400px;
+    height: 400px;
+    /* espaçamento superior */
+    margin-top: 10rem;
+    /* espaçamento do lado esquerdo */
+    margin-left: 10rem;
+    border: 2px solid rgb(155, 155, 155);
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentsobre{
+    display: flex;
+    /* titulo em cima, texto em baixo */
+    flex-direction: column;
+    /* centralizando */
+    align-items: center;
+    justify-content: center;
+}
+
+.contentsobre h2{
+    font-size: 5rem;
+    /* distanciar do texto */
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+.contentsobre p {
+    /* centraliza o texto */
+    text-align: center;
+    font-size: 1.8rem;
+    /* entretanto, o texto empurra o texto pro lado */
+    /* logo, vamos colocar uma width */
+    width: 600px;
+}
+
+/* volta pro html */
+
+/* -----TERCEIRA PARTE------ */
+
+/* ----CARDÁPIO---- */
+
+.cardapio{
+    /* é a section inteira */
+    width: 100vw;
+    display: flex;
+    /* deixa o titulo em cima dos itens do cardapio */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* rgb -> cor sólida
+       rgba -> ultima coluna de opacidade */
+    background-color: rgba(12, 12, 12, 0.8);
+}
+
+.cardapio h2{
+    margin-top: 1.5rem;
+    font-size: 5rem;
+    color: #e6e6e6;
+    text-transform: uppercase;
+
+}
+
+.itens-cardapio{
+    width: 90%;
+    /* distância de cima e de baixo */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    /* para dizer qual o tamanho das colunas */
+    /* falamos que vai repetir as colunas para 
+    que elas fiquem organizadas em telas de tam
+    minimo de card de 150px e máx 350px*/
+    grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+    justify-content: center;
+    align-items: center;
+    /* distância entre cada um dos elementos */
+    /* não vai dar pra ver direito por enquanto
+    por causa do tamanho das imagens, mas dps vemos */
+    gap: 30px;
+}
+
+.itens-cardapio .info{
+    background-color: rgb(221, 221, 221);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* é aplicado em todos os lados. */
+    padding: 1.5rem;
+}
+/* faz logo o .itens-cardapio img */
+
+.itens-cardapio .info h3{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.itens-cardapio .info h4{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* 6 fatias está em cima e o preço em baixo  */
+    /* temos que deixá-lo um do lado do outro */
+    /* cada uma dos espaços de dentro do grid 
+    vai ter um espaço de 150px*/
+    grid-template-columns: 150px 150px;
+    margin-left: 6rem;
+}
+
+.itens-cardapio .info h4 span{
+    font-size: 1.6rem;
+    color: #585858;
+    margin-left: 1.5rem;
+    text-decoration: underline;
+}
+
+.itens-cardapio div{
+    background-color: #5e5252;
+    box-shadow: 0px 0px 1px;
+}
+
+.itens-cardapio img{
+    width: 100%;
+    height: 200px;
+
+}
+
+/* volta pra depois do .itens-cardapio .info*/
+
+.itens-cardapio .info .pedir{
+    width: 200px;
+    height: 35px;
+    margin-top: 0.5rem;
+    background-color: #ffc506;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+    transition: all 200ms ease-in;
+}
+
+.itens-cardapio .info .pedir:hover{
+    background-color: #5e5252;
+    color: white;
+}
+
+
+
+/* -----QUARTA PARTE----- */
+/* ------CONTATOS------ */
+.contatos{
+    width: 100%;
+    background-color: #1f1e1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    padding-bottom: 4rem;
+}
+
+.contatos h3{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    
+}
+
+.contatos-secao{
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.contatos-secao i{
+    margin-right: 1rem;
+}
+
+.contatos-secao div{
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.contatos-secao div:hover{
+    color: #ffc506;
+}
+
+/* -----QUINTA PARTE----- */
+
+footer{
+    height: 25px;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------MEDIAS QUERIES------- */
+/* qnd ela tiver no máximo essa largura, 
+fazemos essas modificações no css */
+
+@media(max-width: 1200px) {
+    .content{
+        /* deixa a logo em cima e a navbar em baixo */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+        padding-left: 0px;
+
+    }
+}
+
+@media (max-width: 980px) {
+    html {
+        /* diminui o tamanho da pág inteira */
+        font-size: 50%;
+    }   
+    
+}
+
+
+
+@media (max-width: 870px) {
+    .content {
+        /* deixa a logo ao lado da navbar */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
+
+    .content .list-menu{
+        display: none;
+    }
+
+    /* hamburguer */
+    .one,
+    .two,
+    .three {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        margin: 6px auto;
+
+        transition-duration: 0.5s ;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        
+
+    }
+    .conteudo-principal h2 {
+        font-size: 2rem;
+        width: 200px;
+        text-align: center;
+    }
+    
+
+    /* parte js */
+/* 
+    .content.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1f1e1f;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content.on .logo {
+        display: none;
+    }
+
+    .content.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .content.on .list-menu {
+        display: block;
+        
+    }
+
+    .content.on .list-menu li {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .content.on .list-menu li a {
+        font-size: 4rem;
+        display: block;
+    }
+
+
+    .content.on .menu-toggle .one {
+        transform: rotate(45deg) translate(8px, -7px);
+    }
+    .content.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .content.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(20px, -6px);
+    } */
+
+    .contatos-secao {
+        /* coloca um contato em cima do outro */
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        
+    }
+
+    .contatos-secao div {
+        /* para deixá-los mais separados */
+        margin: 2rem;
+        
+    }
+
+}
+
+
+@media (max-width: 690px) {
+    /* diminuir o texto deixe seu dia mais massa */
+    .conteudo-principal h1 {
+        width: 350px;
+        text-align: center;
+        font-size: 4rem;
+    }
+    .cardapio h2{
+        /* diminuindo o tamanho dos títulos da página
+        sobre nós, cardapio, contatos */
+        font-size: 4rem;
+    }
+    .contatos h3{
+        font-size: 4rem;
+    }
+    .contentsobre h2{
+        font-size: 4rem;
+    }
+}
+
+/* para ajeitar os btns e o texto sobre nós*/
+@media (max-width: 600px) {
+    
+
+    .contentsobre p {
+        text-align: center;
+        width: 400px;
+     }
+
+     .btn {
+         /* colocando um botão em cima do outro */
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 150px;
+     }
+
+     
+
+    .conteudo-principal h2 {
+        font-size: 2rem;
+        width: 200px;
+        text-align: center;
+    }
+    .cardapio h2{
+        /* diminuindo o tamanho dos títulos da página
+        sobre nós, cardapio, contatos */
+        font-size: 3rem;
+    }
+    .contatos h3{
+        font-size: 3rem;
+    }
+    .contentsobre h2{
+        font-size: 3rem;
+    }
+
+    .btn {
+        width: 150px;
+    }
+}
+
